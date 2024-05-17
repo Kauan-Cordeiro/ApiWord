@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+body{
+    background-color: #d1efde67 !important;
+    overflow-x: hidden;
+}
+header{
+    background-color: #1C9679;
+    width: 101.2%;
+    height: 80px;
+    position: relative;
+    left: -10px;
+    top: -8px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.name {
+    display: flex;
+}
+.name a{
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    position: relative;
+    left: 25px;
+    color: white;
+    margin-top: 12px;
+    text-decoration: none;
+}
+.head-bar button{
+  background-color: #db554300;
+  border: none;
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  color: white;
+  margin-left: 25px;
+}
+.head-bar button:hover{
+  color: rgb(218, 218, 218);
+}
+.name img{
+    width: 70px;
+    height:50px;
+}
+#face{
+    margin-top: 13px;
+    margin-left: 35px;
+    transform: rotate(5deg);
+}
+#flower{
+    position: relative;
+    left: 40px;
+    top: 9px;
+}
+.head-bar{
+    position: relative;
+    left: 54%;
+    top: 5px;
+}
+.head-bar a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-family: "Jomhuria", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+.head-bar a:hover{
+  color: rgb(218, 218, 218);
+} 
+.head-bar a i{
+    margin-left: 3px;
+    font-size: 26px;
+}
+.head-bar .bi-person-circle{
+  margin-left: 2px;
+  font-size: 26px;
+}
+.container{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 65px;
+    height: 200px;
+    box-shadow: -4px 8px 5px rgb(171, 171, 171);
+}
+.container img{
+   width: 102%;
+   max-height: 100%;
+   position: relative;
+   left: -14px;
+}
+.explorer{
+    width: 45%;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 26.5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.cont{
+    width: 190px;
+    height: 70px;
+    border: 0.5px solid ;
+    border-radius: 12px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jomhuria", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    background-color: #efefef;
+}
+.cont a{
+    color: black;
+    text-decoration: none;
+}
+.cont i{
+    margin-left: 4px;
+    color: #DB5543;
+    font-size: 20px;
+}
+.offcanvas-start{
+  height: 720px !important;
+}
+.offcanvas-final{
+  width: 100%;
+  height: 65px;
+  background-color: #1C9679;
+}
+.offcanvas-header{
+  background-color: #1C9679;
+  height: 70px;
+}
+.offcanvas-header .btn-close{
+  background-color: white;
+}
+.offcanvas-header #log{
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  position: absolute;
+  left: 145px;
+  top: 2px;
+}
+.offcanvas-header #cad{
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  position: absolute;
+  left: 115px;
+  top: 2px;
+}
+#loginForm{
+  width: 85%;
+  margin-left: 5%;
+  height: 300px;
+  box-shadow: 5px -5px 20px rgb(169, 169, 169);
+  border-radius: 8px;
+  margin-top: 95px;
+  text-align: center;
+}
+#loginForm :nth-child(1){
+  margin-top: 40px;
+}
+#loginForm input{
+  border-radius: 6px;
+  border: 0.5px solid ;
+  margin-top: 30px;
+  width: 200px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#loginForm button{
+  margin-top: 35px;
+  width: 200px;
+  border: 0.5px solid;
+  border-radius: 5px;
+  height: 35px;
+  background-color: #1C9679;
+  color: black;
+  border: none;
+}
+#loginForm p{
+  font-size: 15px;
+  margin-top: 20px;
+}
+#loginForm a{
+  text-decoration: none;
+  position: relative;
+  top: -10px;
+}
+footer{
+    background-color: #1C9679;
+    width: 101.3%;
+    height: 290px;
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    left: -8px;
+    bottom: 0px;
+  }
+  .foHelp{
+    width: 100%;
+    height: 285px;
+    display: flex;
+    margin-left: 80px !important;
+  }
+  .foHelp:nth-child(1){
+    margin-left: 30px;
+  }
+  .fac{
+    color: #fff;
+    margin-left: 60px;
+    margin-top: 35px;
+    width: auto;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+  }
+  .fac :nth-child(2){
+    margin-top: 8px;
+  }
+  .fac p{
+    font-size: 15px;
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .fac a{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 5px;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif    ;
+  }
+  .fac a:hover{
+    color: rgb(218, 218, 218);
+  }
+  .fac .sub{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .fac .second{
+    margin-top: 17px;
+  }
+  .fac .atd{
+    margin-top: 10px;
+  }
+  .atd{
+    color: #fff;
+    background-color: rgb(38, 37, 37);
+  }
+  .fic{
+    color: #fff;
+    margin-left: 60px;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+  }
+  .fic p {
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 13px;
+  }
+  .fic .preto{
+    color: black;
+  }
+  .fic form{
+    margin-top: 10px;
+  }
+  .fic form input{
+    border: 0.5px;
+    border-radius: 3px;
+  }
+  .fic form :nth-child(2){
+    width: 80px;
+
+  }
+  #sub02{
+    margin-top: 40px;
+  }
+  #sub02 p{
+    color: black;
+  }
+  #sub02 .mae{
+    width: 300px;
+    height: 80px;
+    display: flex;
+    margin-top: 20px;
+  }
+  #sub02 .mae .filho{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-top: 5px;
+    
+  }
+  #sub02 .mae .filho img{
+    width: 30px;
+    height: 30px;
+  }
+ 
+ /* seção da América do Sul */
+.america {
+  width: 19%; 
+  float: left; 
+  padding-right: 40px;
+  position: relative;
+  margin-left: 110px; 
+  left: 100px; 
+  top: 30px;
+  text-align: center;
+}
+
+.america img {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #000000; 
+  border-radius: 12px; 
+  padding: 10px; 
+}
+
+.america h2 {
+  color: #000000;
+  font-size: 38px !important;
+  margin-bottom: 30px; 
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* lista de países à direita */
+.countries {
+  width: 40%; 
+  float: right; 
+  padding-left: 20px; 
+  position: relative;
+  top: 30px;
+} 
+
+.countries h2 {
+  color: #000000 !important;
+  font-size: 38px !important;
+  margin-bottom: 15px;
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.countries ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.countries li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.countries li img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.countries li span {
+  font-size: 18px;
+}
+
+
+
+.countries {
+  width: 50%;
+  float: right; 
+  padding-left: 20px;
+}
+
+.countries h2 {
+  color: #1C9679;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.countries ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.countries li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.countries li img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.countries li span {
+  font-size: 18px;
+}
+
+
+.offcanvas-start {
+  height: auto !important; 
+  width: 0 !important; 
+  overflow: hidden; 
+}
+
+.offcanvas-final {
+  display: none; 
+}
+
+
+/* seção do Brasil */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.countries ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.countries li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.countries li img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px; 
+}
+
+.countries li span {
+  font-size: 18px;
+}
+
+.countries ul li a {
+  text-decoration: none; 
+  color: black; 
+  display: flex; 
+  align-items: center; 
+}
+
+.countries ul li a:hover {
+  text-decoration: underline; 
+}
+
+
+.attraction {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.attraction h2 {
+  font-size: 32px;
+  color: #1C9679;
+  margin-bottom: 20px;
+}
+
+.attraction p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.attraction img.attraction-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 4px solid #000000;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+
+/* seção da América Central */
+
+.america {
+  margin-left: 100px;
+  text-align: center; 
+}
+
+.america figure{
+  width: 400px;
+  height: 300px;
+}
+.america figure img{
+  max-width: 100%;
+  min-height: 100%;
+  
+}
+.countries ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+}
+
+.countries li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.countries li img {
+  width: 40px;
+  height: auto;
+}
+
+
+.countries li span {
+  font-family: "Jomhuria", serif;
+  font-size: 38px;
+}
+
+
+/* seção da América do Norte */
+
+.america {
+  margin-left: 100px;
+  text-align: center; 
+}
+
+.america img {
+  width: 130%; 
+  max-width: 1200px;
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
