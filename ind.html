@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="logica.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="name">
+               <img id="face" src="img/Hawai.png" alt="">
+               <a href="ind.html">InterMiles</a>
+                <img id="flower" src="img/flor.png" alt=""> 
+        </div>
+        <div class="head-bar">
+            <a href="">Chekin</a>
+            
+            <button type="button" id="biri" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+              Entre
+              <i class="bi bi-person-circle"></i>
+            </button>
+            <button id="nomeUsuarioDiv"style="display: none;" type="button" id="biri" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScroll" aria-controls="offcanvasScroll"></button>
+            
+            <a href="" class="carrinho">
+                Pacotes
+                <i class="bi bi-cart-fill"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <p id="cad" style="display: none;">Cadastro</p>
+          <p id="log">Login</p>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form id="loginForm">
+            <input type="email" id="loginEmail" required placeholder="Email" autocomplete="off"><br>
+            <input type="password" id="loginSenha" required placeholder="Senha"><br>
+        <button type="submit">Login</button>
+        <p>Ainda não possui cadastro?</p>
+        <a href="" onclick="event.preventDefault(); view()">Cadastrar</a>
+    </form>
+        <form id="cadastroForm" style="display: none;">
+                <input type="nome" id="cadastroNome" required placeholder="Nome" autocomplete="off"><br>
+                <input type="cpf" id="cadastroCPF" required placeholder="CPF" autocomplete="off"><br>
+                <input type="tel" id="cadastroTelefone" required Idade placeholder="Telefone" autocomplete="off"><br>
+                <input type="email" id="cadastroEmail" required placeholder="Email" autocomplete="off"><br>
+                <input type="password" id="cadastroSenha" required placeholder="Senha"><br>
+            <button type="submit">Cadastrar</button>
+            <br>
+            <a href="" onclick="event.preventDefault(); Review()" class="returna">Voltar</a>
+        </form>
+        </div>
+        <div class="offcanvas-final">
+          <p id="ola" style="display: none;">Torne-se um Cliente</p>
+          <p id="vindo">Bem vindo(a) de Volta</p>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScroll" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+          <p id="cad">Meu perfil</p>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" id="bodyCanva">
+          <figure>
+              <img src="img/person.png" alt="">
+          </figure>
+          <div class="dados">
+              <div class="mae1">
+                  <label for="nome">Nome:</label>
+                  <div class="espaco">
+                      <p id="nomeBord"></p>
+                  </div>
+  
+                  <label for="email">Email:</label>
+                  <div class="espaco">
+                      <p id="emailBord"></p>
+                  </div>
+  
+                  <label for="telefone">Telefone:</label>
+                  <div class="espaco">
+                      <p id="telefoneBord"></p>
+                  </div>
+              </div>
+              <div class="mae2">
+                  <label for="cpf">CPF:</label>
+                  <div class="espaco">
+                      <p id="cpfBord"></p>
+                  </div>
+  
+                  <label for="senha">Senha:</label>
+                  <div class="espaco">
+                      <p id="senhaBord" type="password"></p> 
+                  </div>
+              </div>
+          </div>
+      </div>
+      <a href="" onclick="sair()" id="saiAgr">Finalizar Sessão</a>
+      <div class="offcanvas-final"></div>
+  </div>
+  
+  </div>
+  
+
+    <div class="container">
+        <img src="img/planner.jpg" alt="">
+    </div>
+
+    <section class="explorer">
+        <div class="cont">
+            <a href="sul.html">América do Sul</a>
+            <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <div class="cont">
+            <a href="">América Central</a>
+            <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <div class="cont">
+            <a href="">América do Norte</a>
+            <i class="bi bi-geo-alt-fill"></i>
+        </div>
+    </section>
+
+    <footer>    
+        <div class="foHelp">
+          <div class="fac">
+            <p>DÚVIDAS</p>
+            <a href="">Perguntas Frequentes</a>
+            <a href="">Formas de Pagamentos</a>
+            <a href="">Troca e Devoluções</a>
+            <a href="">Mapa do Site</a>
+          </div>
+          <div class="fac">
+            <p>LINKS ÚTEIS</p>
+            <a href="cookies.html">Política de Privacidade</a>
+            <a href="">Proteja-se Contra Fraudes</a>
+            <a href="cookies.html">Termos de Uso</a>
+            <a href="">Regulamentos de Compra</a>
+            <a href="">Alerta sobre Segurança</a>
+            <a href="">Código de Desefa do Consumidor</a>
+            <a href="">Preferência de Cookies</a>
+          </div>
+          <div class="fac">
+            <p>INSTITUIÇÃO</p>
+            <a href="sobre.html">Nossa História</a>
+            <a href="">Grupo InterMiles</a>
+            <a href="">Trabalhe Conosco</a> 
+            <a href="">Impresarial Juridico</a>
+            <a href="">Cashback</a>
+            <a href="">Seja um Filiado Nosso</a>
+            <a href="">Blog</a>
+          </div>
+          <div class="fac">
+            <p>SERVIÇO AO CLIENTE</p>
+            <button class="atd">Atendimento</button>
+            <a href="" class="second">Central de Reclamações</a>
+            <a href="">Compre pelo Whatsapp</a>
+          </div>
+          <div class="fic">
+            <p>SE ATUALIZE DE NOSSAS OFERTAS E NOVIDADES</p>
+            <form action="#">
+              <input type="text" placeholder="digite seu e-mail">
+              <input type="text" placeholder="nome">
+              <button class="atd">Cadastrar</button>
+            </form>
+            <div class="sub" id="sub02">
+              <b class="preto">Siga nossas redes sociais</b>
+              <div class="mae">
+                <div class="filho">
+                  <a href="https://www.instagram.com/">
+                    <img src="img/instagram.svg" alt="">
+                  </a>
+                </div>
+                <div class="filho">
+                  <a href="https://pt-br.facebook.com/">
+                    <img src="img/facebook.svg" alt="">
+                  </a>
+              </div>
+                <div class="filho">
+                  <a href="https://github.com/">
+                    <img src="img/github.svg" alt="">
+                  </a>
+                </div>
+                <div class="filho">
+                  <a href="https://twitter.com/home">
+                    <img src="img/twitter-x.svg" alt="">
+                  </a>
+                </div>
+              </div>
+              </div>
+          </div>
+          
+          </div>
+        </div>
+    </footer>
+
+    <script>
+
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    const email = document.getElementById('loginEmail').value; // Obtém o email do campo de login
+
+    // Faz uma solicitação GET para a rota de obter dados, passando o email do usuário
+    fetch(`http://localhost:3000/obterDados?email=${email}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.sucesso && data.usuario) { // Verifica se data.sucesso é verdadeiro e se data.usuario está definido
+                // Se os dados foram obtidos com sucesso e o usuário está definido, exibe-os na página
+                document.getElementById('nomeBord').textContent = data.usuario.nome;
+                document.getElementById('emailBord').textContent = data.usuario.email;
+                document.getElementById('telefoneBord').textContent = data.usuario.telefone;
+                document.getElementById('cpfBord').textContent = data.usuario.cpf;
+                document.getElementById('senhaBord').textContent = data.usuario.senha;
+
+                localStorage.setItem('usuario', JSON.stringify(data.usuario));
+            } else {
+                // Se não foi possível encontrar o usuário ou se não há dados de usuário definidos, exibe uma mensagem de erro
+                console.error('Erro ao obter dados do usuário:', data.mensagem);
+                alert('Erro ao obter dados do usuário');
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao carregar dados do usuário:', error);
+            alert('Erro ao carregar dados do usuário');
+        });
+});
+
+
+function carregarDadosDoLocalStorage() {
+            const usuario = JSON.parse(localStorage.getItem('usuario'));
+            if (usuario) {
+                document.getElementById('nomeBord').textContent = usuario.nome;
+                document.getElementById('emailBord').textContent = usuario.email;
+                document.getElementById('telefoneBord').textContent = usuario.telefone;
+                document.getElementById('cpfBord').textContent = usuario.cpf;
+                document.getElementById('senhaBord').textContent = usuario.senha;
+            }
+        }
+
+        // Chama a função para carregar os dados do localStorage quando a página for carregada
+        document.addEventListener('DOMContentLoaded', carregarDadosDoLocalStorage);
+
+    </script>
+</body>
+</html>

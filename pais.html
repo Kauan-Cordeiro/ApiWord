@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Country Information</h1>
+        <div id="countryInfo">
+            <h2 id="countryName"></h2>
+            <p><strong>Nome Oficial:</strong> <span id="officialName"></span></p>
+            <p><strong>Moeda:</strong> <span id="currency"></span></p>
+            <p><strong>Capital:</strong> <span id="capital"></span></p>
+            <p><strong>Região:</strong> <span id="region"></span></p>
+            <p><strong>Sub-regiões:</strong> <span id="subregion"></span></p>
+            <p><strong>Lingua(s):</strong> <span id="languages"></span></p>
+            <p><strong>Área:</strong> <span id="area"></span> km²</p>
+            <p><strong>População:</strong> <span id="population"></span></p>
+            <p><strong>Continente:</strong> <span id="continent"></span></p>
+            <div>
+                <img id="flagPng" alt="Country flag">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Função para traduzir os dados do país para o português brasileiro
+        async function translateData(data) {
+            const translatedData = { ...data }; // Copiar os dados originais
+
+            // Traduzir nome oficial e nome comum para o português brasileiro
+            const translationResponse = await fetch(`https://translation.googleapis.com/language/translate/v2?key=YOUR_API_KEY&q=${encodeURIComponent(data.name.official)},${encodeURIComponent(data.name.common)}&target=pt-BR`);
+            const translationData = await translationResponse.json();
+            if (translationData && translationData.data && translationData.data.translations) {
+                translatedData.name.official = translationData.data.translations[0].translatedText.split(',')[0];
+                translatedData.name.common = translationData.data.translations[0].translatedText.split(',')[1];
+            }
+
+            return translatedData;
+        }   
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const params = new URLSearchParams(window.location.search);
+            const countryName = params.get('country');
+
+            fetch("https://restcountries.com/v3.1/all")
+                .then(response => response.json())
+                .then(async data => {
+                    const selectedCountry = data.find(country => country.name.common === countryName);
+                    if (selectedCountry) {
+                        // Traduzir os dados do país para o português brasileiro
+                        const translatedCountry = await translateData(selectedCountry);
+
+                        // Exibir os dados traduzidos
+                        document.getElementById("countryName").textContent = translatedCountry.name.common;
+                        document.getElementById("officialName").textContent = translatedCountry.name.official;
+                        document.getElementById("currency").textContent = `${translatedCountry.currencies[Object.keys(translatedCountry.currencies)[0]].name} (${translatedCountry.currencies[Object.keys(translatedCountry.currencies)[0]].symbol})`;
+                        document.getElementById("capital").textContent = translatedCountry.capital[0];
+                        document.getElementById("region").textContent = translatedCountry.region;
+                        document.getElementById("subregion").textContent = translatedCountry.subregion;
+                        document.getElementById("languages").textContent = Object.values(translatedCountry.languages).join(", ");
+                        document.getElementById("area").textContent = translatedCountry.area;
+                        document.getElementById("population").textContent = translatedCountry.population;
+                        document.getElementById("continent").textContent = translatedCountry.continents[0];
+                        document.getElementById("flagPng").src = translatedCountry.flags.png;
+                        document.getElementById("flagPng").alt = `Flag of ${translatedCountry.name.common}`;
+                    } else {
+                        console.error("Country not found");
+                    }
+                })
+                .catch(error => console.error("Error fetching country data:", error));
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #countryInfo {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        img {
+            max-width: 100px;
+            margin: 10px;
+        }
+    </style>
+</body>
+</html>
